@@ -76,6 +76,16 @@ class Function {
         return slow;
     }
 
+    checkPallindrome(list){
+        var newList=new LinkedList();
+        newList=list;
+        // console.log(newList.head);
+        var result=this.reverseList(list);
+        // console.log(result.head);
+        // console.log(newList.head);
+        
+        
+    }
 }
 
 module.exports ={
