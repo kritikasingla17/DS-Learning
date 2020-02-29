@@ -22,6 +22,14 @@ class LinkedList {
             current.next = node;
         }
     }
+
+    giveRefToPrevNode(currentNode,refferedNode){
+        var current=this.head;
+        while(current!==currentNode){
+            current=current.next;
+        }
+        current.next=refferedNode;
+    }
 }
 
 module.exports = LinkedList;
