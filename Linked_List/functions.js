@@ -15,5 +15,19 @@ class Function {
         }    
         return false;
     }
+
+    reverseList(list){
+        console.log("in reverse");
+        var next=null;
+        var prev=null;
+        var current=list.head;
+        while(current){
+            next=current.next;
+            current.next=prev;
+            prev=current;
+            current=next;
+        }
+        return prev;
+    }
 }
 module.exports = Function;

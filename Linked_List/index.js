@@ -14,7 +14,7 @@ var toRef=linklist1.head;
 for(var i=0;i<4;i++){
     toRef=toRef.next;
 }
-linklist1.giveRefToPrevNode(toRef,linklist1.head.next);
+// linklist1.giveRefToPrevNode(toRef,linklist1.head.next);
 
 var current=linklist1.head;
 for(var i=0;i<3;i++){
@@ -22,6 +22,7 @@ for(var i=0;i<3;i++){
     current=current.next;
 }
 
-console.log(functions.detectLoop(linklist1));
+// console.log(functions.detectLoop(linklist1));
+console.log(functions.reverseList(linklist1));
 
 
