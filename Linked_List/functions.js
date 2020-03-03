@@ -29,5 +29,21 @@ class Function {
         }
         return prev;
     }
+
+    midElement(list){
+        console.log("in mid element");
+        var current=list.head;
+        let size=0;
+        while(current){
+            size++;
+            current=current.next;
+        }
+        current=list.head;
+        for(var i=1;i<size/2;i++){
+            current=current.next;
+        }
+        return current;
+    }
+   
 }
 module.exports = Function;

@@ -8,6 +8,8 @@ linklist1.insert(2);
 linklist1.insert(3);
 linklist1.insert(4);
 linklist1.insert(5);
+linklist1.insert(6);
+
 
 
 var toRef=linklist1.head;
@@ -23,6 +25,6 @@ for(var i=0;i<3;i++){
 }
 
 // console.log(functions.detectLoop(linklist1));
-console.log(functions.reverseList(linklist1));
+console.log(functions.midElement(linklist1));
 
 
