@@ -46,7 +46,6 @@ describe("test linked list function", () => {
         list.insert(3);
         list.insert(4);
         list.insert(5);
-        list.insert(6);
         var result=functions.midElement(list);
         const output={
             element:3,
@@ -54,10 +53,7 @@ describe("test linked list function", () => {
                 element:4,
                 next:{
                     element:5,
-                    next:{
-                        element:6,
-                        next:null
-                    }
+                    next:null
                 }
             }
         }

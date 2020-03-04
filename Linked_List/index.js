@@ -67,17 +67,13 @@ class Function {
 
     midElement(list) {
         console.log("in mid element");
-        var current = list.head;
-        let size = 0;
-        while (current) {
-            size++;
-            current = current.next;
+        var slow = list.head;
+        var fast=list.head;
+        while(fast.next){
+            fast=fast.next.next;
+            slow=slow.next;
         }
-        current = list.head;
-        for (var i = 1; i < size / 2; i++) {
-            current = current.next;
-        }
-        return current;
+        return slow;
     }
 
 }
