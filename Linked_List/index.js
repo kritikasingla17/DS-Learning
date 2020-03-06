@@ -76,6 +76,7 @@ class Function {
         }
         return slow;
     }
+
     checkPallindrome(list){
         var outputString="";
         var current=list.head;
@@ -88,6 +89,25 @@ class Function {
         return true;
 
         return false;
+    }
+
+    getNthFromLast(list,n){
+        var slow=list.head;
+        var fast=list.head;
+        var count=0;
+        while(count<n){
+            if(fast!==null){
+                fast=fast.next
+            }
+            count++;
+        }
+        while(fast!=null){
+            fast=fast.next;
+            slow=slow.next;
+        }
+        return slow;
+        
+
     }
 
 }

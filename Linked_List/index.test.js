@@ -72,4 +72,16 @@ describe("test linked list function", () => {
         var result=functions.checkPallindrome(list);
         expect(result).toEqual(true);
     })
+
+    test ("get Nth element from last",()=>{
+        console.log("get nth element from last");
+        var list=new LinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
+        var result=functions.getNthFromLast(list,4);
+        expect(result.element).toEqual(2);
+    })
 })
