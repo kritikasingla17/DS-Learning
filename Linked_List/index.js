@@ -1,3 +1,4 @@
+import {reverseString} from '../helper/helper';
 class Node {
     constructor(element) {
         this.element = element;
@@ -74,6 +75,19 @@ class Function {
             slow=slow.next;
         }
         return slow;
+    }
+    checkPallindrome(list){
+        var outputString="";
+        var current=list.head;
+        while(current){
+            outputString=outputString+current.element;
+            current=current.next;
+        }
+       var reverseStr=reverseString(outputString);
+        if(reverseStr===outputString)
+        return true;
+
+        return false;
     }
 
 }

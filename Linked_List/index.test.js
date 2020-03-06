@@ -59,4 +59,17 @@ describe("test linked list function", () => {
         }
         expect(result).toEqual(output);
     })
+
+
+    test("check list is pallindrome",()=>{
+        console.log("in checkpallindrome");
+        var list=new LinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(2);
+        list.insert(1);
+        var result=functions.checkPallindrome(list);
+        expect(result).toEqual(true);
+    })
 })
