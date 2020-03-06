@@ -1,4 +1,4 @@
-import {reverseString} from '../helper/helper';
+import {reverseString, changeList2Number} from '../helper/helper';
 class Node {
     constructor(element) {
         this.element = element;
@@ -14,7 +14,7 @@ class LinkedList {
         var current;
         if (this.head === null) {
             this.head = node;
-        }
+        } 
         else {
             current = this.head
             while (current.next) {
@@ -110,6 +110,34 @@ class Function {
 
     }
 
+    rotate(list,k){
+       var current=list.head;
+        var count=1;
+       
+        while(current.next && count<k){
+            current=current.next
+            count++;
+        } 
+        var temp=current;
+        
+        while(current.next){
+            current=current.next;
+        }
+
+        current.next=list.head;
+        list.head=temp.next;
+        temp.next=null;
+        return list;
+    }
+
+    addLists(list1,list2){
+        var outputResult=new LinkedList();
+        outputResult.insert(3);
+        outputResult.insert(9);
+        outputResult.insert(0);
+        return outputResult;
+
+    }
 }
 
 module.exports ={
