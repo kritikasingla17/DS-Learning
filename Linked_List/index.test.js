@@ -105,4 +105,21 @@ describe("test linked list function", () => {
         expectedList.insert(3);
         expect(newList).toEqual(expectedList);
     })
+
+    test("add 2 no represented by list",()=>{
+        var no1=new LinkedList();
+        var no2=new LinkedList();
+        var outputResult=new LinkedList();
+        no1.insert(4);
+        no1.insert(5);
+        no2.insert(3);
+        no2.insert(4);
+        no2.insert(5);
+        outputResult.insert(3);
+        outputResult.insert(9);
+        outputResult.insert(0);
+        var result=functions.addLists(no1,no2);
+        expect(result).toEqual(outputResult);
+
+    })
 })
