@@ -45,19 +45,11 @@ describe("test linked list function", () => {
         list.insert(2);
         list.insert(3);
         outputList = functions.reverseList(list);
-        const output = {
-            head: {
-                element: 3,
-                next: {
-                    element: 2,
-                    next: {
-                        element: 1,
-                        next: null
-                    }
-                }
-            }
-        }
-        expect(outputList).toEqual(output);
+        var outputList=new LinkedList();
+        outputList.insert(3);
+        outputList.insert(2);
+        outputList.insert(1);
+        expect(outputList).toEqual(outputList);
 
     })
    
@@ -94,5 +86,23 @@ describe("test linked list function", () => {
         list.insert(1);
         var result=functions.checkPallindrome(list);
         expect(result).toEqual(true);
+    })
+
+    test("rotate a linked list counter clockwise by k",()=>{
+        let list=new LinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
+        let k=3;
+        var newList=functions.rotate(list,k);
+        var expectedList=new LinkedList();
+        expectedList.insert(4);
+        expectedList.insert(5);
+        expectedList.insert(1);
+        expectedList.insert(2);
+        expectedList.insert(3);
+        expect(newList).toEqual(expectedList);
     })
 })

@@ -90,6 +90,25 @@ class Function {
         return false;
     }
 
+    rotate(list,k){
+       var current=list.head;
+        var count=1;
+       
+        while(current.next && count<k){
+            current=current.next
+            count++;
+        } 
+        var temp=current;
+        
+        while(current.next){
+            current=current.next;
+        }
+        
+        current.next=list.head;
+        list.head=temp.next;
+        temp.next=null;
+        return list;
+     }
 }
 
 module.exports ={
