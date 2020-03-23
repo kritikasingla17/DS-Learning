@@ -88,6 +88,17 @@ describe("test linked list function", () => {
         expect(result).toEqual(true);
     })
 
+    test ("get Nth element from last",()=>{
+        console.log("get nth element from last");
+        var list=new LinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
+        var result=functions.getNthFromLast(list,4);
+        expect(result.element).toEqual(2);
+    });
     test("rotate a linked list counter clockwise by k",()=>{
         let list=new LinkedList();
         list.insert(1);
@@ -95,6 +106,7 @@ describe("test linked list function", () => {
         list.insert(3);
         list.insert(4);
         list.insert(5);
+       
         let k=3;
         var newList=functions.rotate(list,k);
         var expectedList=new LinkedList();
@@ -104,7 +116,7 @@ describe("test linked list function", () => {
         expectedList.insert(2);
         expectedList.insert(3);
         expect(newList).toEqual(expectedList);
-    })
+    });
 
     test("add 2 no represented by list",()=>{
         var no1=new LinkedList();
