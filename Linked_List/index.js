@@ -111,6 +111,9 @@ class Function {
     }
 
     addLists(list1,list2){
+        var no1=changeList2Number(list1);
+        var no2=changeList2Number(list2);
+        console.log(no1+no2);
         var outputResult=new LinkedList();
         outputResult.insert(3);
         outputResult.insert(9);
