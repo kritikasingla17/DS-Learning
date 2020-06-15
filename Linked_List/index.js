@@ -51,26 +51,25 @@ class Function {
     }
 
     reverseList(list) {
-        console.log("in reverse");
-        var next = null;
-        var prev = null;
-        var current = list.head;
-        while (current) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
+        console.log("in reverse");              //  1-> 2-> 3-> 4-> 5-> null
+        var next = null;                        //  next=null
+        var prev = null;                        //  prev = null
+        var current = list.head;                //  current= first
+        while (current) {                       
+            next = current.next;                //  next=second
+            current.next = prev;                //  current.next=null   //first.next=null
+            prev = current;                     //  prev=first
+            current = next;                     //  current =second
         }
-        var result={head:null};
-        result.head=prev; 
-        return result;
+        list.head=prev; 
+        return list;
     }
 
     midElement(list) {
         console.log("in mid element");
         var slow = list.head;
         var fast=list.head;
-        while(fast.next){
+        while(fast.next && fast.next.next){
             fast=fast.next.next;
             slow=slow.next;
         }
