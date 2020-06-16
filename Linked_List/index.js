@@ -50,16 +50,37 @@ class Function {
         return false;
     }
 
+
+    //reverse List DRY RUN
+
+   // head->   1/200(100) ->2/300(200)    ->3/400(300)    ->4/500(400)    ->5/null(500)
+
+   // next=null     prev=null      current=1/200(100)   next=200    current=1/null(100)     prev=1/null(100)    current=2/300(200)
+
+   // next=3/400(300)   current=2/100(200)   prev=2/100(200)    current=3/400(300)
+   
+   //next=4/500(400)    current=3/200(300)  prev=3/200(300)     current=4/500(400)
+
+   //next=5/null(500)   current=4/300(400)  prev=4/300(400)     current=5/null(500)
+
+   //next=null      current=5/400(500)      prev=5/400(500)     current=null
+
+
+   //      1/null(100) <-  2/100(200)  <-  3/200(300)  <-  4/300(400)  <-  5/400(500)  <-  head
+
+
+
+
     reverseList(list) {
-        console.log("in reverse");              //  1-> 2-> 3-> 4-> 5-> null
-        var next = null;                        //  next=null
-        var prev = null;                        //  prev = null
-        var current = list.head;                //  current= first
+        console.log("in reverse");              
+        var next = null;                        
+        var prev = null;                       
+        var current = list.head;               
         while (current) {                       
-            next = current.next;                //  next=second
-            current.next = prev;                //  current.next=null   //first.next=null
-            prev = current;                     //  prev=first
-            current = next;                     //  current =second
+            next = current.next;                
+            current.next = prev;                
+            prev = current;                     
+            current = next;                    
         }
         list.head=prev; 
         return list;
