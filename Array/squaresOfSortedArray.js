@@ -1,8 +1,8 @@
 //Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
 
 
-var inputArr=[-4,-1,0,3,10];
-var outputArr=[0,1,9,16,100];
+// var inputArr=[-4,-1,0,3,10];
+// var outputArr=[0,1,9,16,100];
 
 function squaresOfsortedArr(inputArr){
 
@@ -26,4 +26,4 @@ function squaresOfsortedArr(inputArr){
 
 }
 
-squaresOfsortedArr(inputArr)
+// squaresOfsortedArr(inputArr)
