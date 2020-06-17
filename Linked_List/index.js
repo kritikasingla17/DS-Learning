@@ -34,13 +34,18 @@ class LinkedList {
 }
 class Function {
 
+
+    //  head->  1/200   ->2/300 ->3/400 ->4/null
+
+    //slow=2;fast=3     ->slow=3;fast=
+
     detectLoop(list) {
         console.log("in detect loop");
         var slow = list.head;
         var fast = list.head;
         if (slow === null)
             return false;
-        while (slow.next && fast.next) {
+        while (slow.next && (fast.next && fast.next.next)) {
             slow = slow.next;
             fast = fast.next.next
             if (slow === fast) {

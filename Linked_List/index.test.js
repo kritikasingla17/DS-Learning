@@ -40,17 +40,31 @@ describe("test linked list function", () => {
   test("reverse link list", () => {
     var list = new LinkedList();
     var outputList = new LinkedList();
-
+    var resultList;
     list.insert(1);
     list.insert(2);
     list.insert(3);
-    outputList = functions.reverseList(list);
+  resultList= functions.reverseList(list);
     var outputList = new LinkedList();
     outputList.insert(3);
     outputList.insert(2);
     outputList.insert(1);
-    expect(outputList).toEqual(outputList);
+    expect(resultList).toEqual(outputList);
   });
+
+
+  test("detect loop",()=>{
+    var list=new LinkedList();
+    var output=false;
+    var result;
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+
+    result=functions.detectLoop(list);
+    expect(result).toEqual(output)
+  })
 
   test("find mid element of list for odd no. of elements", () => {
     var list = new LinkedList();
