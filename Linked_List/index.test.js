@@ -164,4 +164,30 @@ describe("test linked list function", () => {
     var result = functions.addLists(no1, no2);
     expect(result).toEqual(outputResult);
   });
+
+  test("remove duplicates from a list",()=>{
+
+    console.log("in remove duplicates");
+
+    var input=new LinkedList();
+    var output=new LinkedList();
+
+    output.insert(1);
+    output.insert(2);
+    output.insert(3);
+
+    input.insert(1);
+    input.insert(1);
+    input.insert(1);
+    input.insert(2);
+    input.insert(2);
+    input.insert(3);
+    input.insert(3);
+   
+    var result=functions.removeDuplicates(input);
+    expect(result).toEqual(output);
+        
+
+
+  })
 });

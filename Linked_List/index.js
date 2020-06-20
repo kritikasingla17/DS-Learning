@@ -166,6 +166,20 @@ class Function {
         return outputResult;
 
     }
+
+    removeDuplicates(list){
+        var current=list.head
+        while(current && current.next){
+            var nxt=current.next
+            if(current.element===nxt.element){
+                current.next=nxt.next
+            }
+            else{
+                current=current.next
+            }
+        }
+        return list;
+    }
 }
 
 module.exports ={
