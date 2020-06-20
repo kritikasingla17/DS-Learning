@@ -165,7 +165,7 @@ describe("test linked list function", () => {
     expect(result).toEqual(outputResult);
   });
 
-  test("remove duplicates from a list",()=>{
+  test("remove duplicates from a sorted list",()=>{
 
     console.log("in remove duplicates");
 
@@ -189,5 +189,30 @@ describe("test linked list function", () => {
         
 
 
+  })
+  test("remove duplicates from a list",()=>{
+
+    console.log("in remove duplicates from non sorted list");
+
+    var input=new LinkedList();
+    var output=new LinkedList();
+
+    output.insert(51);
+    output.insert(5);
+    output.insert(2);
+    output.insert(3);
+    output.insert(6);
+
+    input.insert(51);
+    input.insert(5);
+    input.insert(2);
+    input.insert(3);
+    input.insert(2);
+    input.insert(6);
+    input.insert(51);
+   
+    var result=functions.removeDuplicatesUnsortedList(input);
+    expect(result).toEqual(output);
+        
   })
 });

@@ -180,6 +180,25 @@ class Function {
         }
         return list;
     }
+
+
+    removeDuplicatesUnsortedList(list){
+        var obj={}
+        var current=list.head;
+        var prev=null;
+        while(current){
+            if(obj[current.element]!=undefined && obj[current.element]!=null){
+                prev.next=current.next
+            }
+            else{
+                obj[current.element]=current.element;
+                prev=current;
+            }
+            current=current.next
+        }
+        return list;
+
+    }
 }
 
 module.exports ={
